@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -6,10 +5,8 @@ import FeatureCard from '@/components/FeatureCard';
 import { AlertTriangle, BarChart, Brain, Calendar, Clock, FileText, Heart, MessageSquare, Settings, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-
 const Features: React.FC = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       {/* Hero Section */}
@@ -35,36 +32,12 @@ const Features: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard
-              title="Early Burnout Detection"
-              description="AI algorithms detect subtle changes in language and mood patterns to identify early signs of burnout before they become critical."
-              icon={<AlertTriangle className="h-6 w-6" />}
-            />
-            <FeatureCard
-              title="AI Wellness Assistant"
-              description="Personalized recommendations and insights based on your unique patterns, providing timely interventions when needed."
-              icon={<Brain className="h-6 w-6" />}
-            />
-            <FeatureCard
-              title="Journaling Companion"
-              description="Private, secure journaling with AI insights that help process emotions and track mental wellbeing over time."
-              icon={<FileText className="h-6 w-6" />}
-            />
-            <FeatureCard
-              title="Mood Tracking"
-              description="Simple daily check-ins to monitor emotional wellbeing with visual trends and patterns over time."
-              icon={<Heart className="h-6 w-6" />}
-            />
-            <FeatureCard
-              title="Wellness Analytics"
-              description="Real-time analytics and trends to understand your mental health patterns and make informed decisions."
-              icon={<BarChart className="h-6 w-6" />}
-            />
-            <FeatureCard
-              title="Team Insights (Admin)"
-              description="Anonymized team-level analytics to help leadership identify departments that may need additional support."
-              icon={<User className="h-6 w-6" />}
-            />
+            <FeatureCard title="Early Burnout Detection" description="AI algorithms detect subtle changes in language and mood patterns to identify early signs of burnout before they become critical." icon={<AlertTriangle className="h-6 w-6" />} />
+            <FeatureCard title="AI Wellness Assistant" description="Personalized recommendations and insights based on your unique patterns, providing timely interventions when needed." icon={<Brain className="h-6 w-6" />} />
+            <FeatureCard title="Journaling Companion" description="Private, secure journaling with AI insights that help process emotions and track mental wellbeing over time." icon={<FileText className="h-6 w-6" />} />
+            <FeatureCard title="Mood Tracking" description="Simple daily check-ins to monitor emotional wellbeing with visual trends and patterns over time." icon={<Heart className="h-6 w-6" />} />
+            <FeatureCard title="Wellness Analytics" description="Real-time analytics and trends to understand your mental health patterns and make informed decisions." icon={<BarChart className="h-6 w-6" />} />
+            <FeatureCard title="Team Insights (Admin)" description="Anonymized team-level analytics to help leadership identify departments that may need additional support." icon={<User className="h-6 w-6" />} />
           </div>
         </div>
       </section>
@@ -91,29 +64,23 @@ const Features: React.FC = () => {
                   CareMind provides healthcare professionals with a private space to process their experiences and receive personalized support.
                 </p>
                 <ul className="space-y-4">
-                  {[
-                    {
-                      icon: <FileText className="h-5 w-5" />,
-                      title: "Private Journaling",
-                      description: "Secure, confidential space to process difficult experiences and emotions"
-                    },
-                    {
-                      icon: <Calendar className="h-5 w-5" />,
-                      title: "Daily Check-ins",
-                      description: "Quick mood tracking to build awareness of emotional patterns"
-                    },
-                    {
-                      icon: <MessageSquare className="h-5 w-5" />,
-                      title: "AI Support",
-                      description: "24/7 access to supportive guidance based on your unique needs"
-                    },
-                    {
-                      icon: <Clock className="h-5 w-5" />,
-                      title: "Wellness Resources",
-                      description: "Curated meditation, breathing exercises, and self-care activities"
-                    }
-                  ].map((item, index) => (
-                    <li key={index} className="flex">
+                  {[{
+                  icon: <FileText className="h-5 w-5" />,
+                  title: "Private Journaling",
+                  description: "Secure, confidential space to process difficult experiences and emotions"
+                }, {
+                  icon: <Calendar className="h-5 w-5" />,
+                  title: "Daily Check-ins",
+                  description: "Quick mood tracking to build awareness of emotional patterns"
+                }, {
+                  icon: <MessageSquare className="h-5 w-5" />,
+                  title: "AI Support",
+                  description: "24/7 access to supportive guidance based on your unique needs"
+                }, {
+                  icon: <Clock className="h-5 w-5" />,
+                  title: "Wellness Resources",
+                  description: "Curated meditation, breathing exercises, and self-care activities"
+                }].map((item, index) => <li key={index} className="flex">
                       <div className="mr-4 mt-1">
                         <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                           {item.icon}
@@ -123,8 +90,7 @@ const Features: React.FC = () => {
                         <p className="font-medium">{item.title}</p>
                         <p className="text-gray-600">{item.description}</p>
                       </div>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
               <div className="relative">
@@ -203,29 +169,23 @@ const Features: React.FC = () => {
                   CareMind provides healthcare leaders with anonymized insights to support team wellbeing while respecting individual privacy.
                 </p>
                 <ul className="space-y-4">
-                  {[
-                    {
-                      icon: <BarChart className="h-5 w-5" />,
-                      title: "Team Analytics",
-                      description: "Anonymized department-level trends to identify where support is needed"
-                    },
-                    {
-                      icon: <AlertTriangle className="h-5 w-5" />,
-                      title: "Early Warning System",
-                      description: "Proactive alerts when burnout risk thresholds are reached"
-                    },
-                    {
-                      icon: <User className="h-5 w-5" />,
-                      title: "Resource Allocation",
-                      description: "Data-driven insights to effectively distribute support resources"
-                    },
-                    {
-                      icon: <Settings className="h-5 w-5" />,
-                      title: "Privacy Controls",
-                      description: "Robust privacy settings that never compromise individual confidentiality"
-                    }
-                  ].map((item, index) => (
-                    <li key={index} className="flex">
+                  {[{
+                  icon: <BarChart className="h-5 w-5" />,
+                  title: "Team Analytics",
+                  description: "Anonymized department-level trends to identify where support is needed"
+                }, {
+                  icon: <AlertTriangle className="h-5 w-5" />,
+                  title: "Early Warning System",
+                  description: "Proactive alerts when burnout risk thresholds are reached"
+                }, {
+                  icon: <User className="h-5 w-5" />,
+                  title: "Resource Allocation",
+                  description: "Data-driven insights to effectively distribute support resources"
+                }, {
+                  icon: <Settings className="h-5 w-5" />,
+                  title: "Privacy Controls",
+                  description: "Robust privacy settings that never compromise individual confidentiality"
+                }].map((item, index) => <li key={index} className="flex">
                       <div className="mr-4 mt-1">
                         <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                           {item.icon}
@@ -235,8 +195,7 @@ const Features: React.FC = () => {
                         <p className="font-medium">{item.title}</p>
                         <p className="text-gray-600">{item.description}</p>
                       </div>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
             </div>
@@ -263,8 +222,6 @@ const Features: React.FC = () => {
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Features;
