@@ -63,7 +63,7 @@ const Features: React.FC = () => {
             <FeatureCard
               title="Team Insights (Admin)"
               description="Anonymized team-level analytics to help leadership identify departments that may need additional support."
-              icon={<Users className="h-6 w-6" />}
+              icon={<User className="h-6 w-6" />}
             />
           </div>
         </div>
@@ -215,7 +215,7 @@ const Features: React.FC = () => {
                       description: "Proactive alerts when burnout risk thresholds are reached"
                     },
                     {
-                      icon: <Users className="h-5 w-5" />,
+                      icon: <User className="h-5 w-5" />,
                       title: "Resource Allocation",
                       description: "Data-driven insights to effectively distribute support resources"
                     },
