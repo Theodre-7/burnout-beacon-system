@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import DashboardHome from "./pages/DashboardHome";
 import Journal from "./pages/Journal";
+import MoodTracking from "./pages/MoodTracking";
 
 // Admin
 import Admin from "./pages/Admin";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DashboardHome />} />
             <Route path="journal" element={<Journal />} />
+            <Route path="mood" element={<MoodTracking />} />
             {/* Add other dashboard routes as needed */}
           </Route>
           
