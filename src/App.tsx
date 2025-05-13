@@ -18,10 +18,17 @@ import Dashboard from "./pages/Dashboard";
 import DashboardHome from "./pages/DashboardHome";
 import Journal from "./pages/Journal";
 import MoodTracking from "./pages/MoodTracking";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 
 // Admin
 import Admin from "./pages/Admin";
 import AdminHome from "./pages/AdminHome";
+import AdminAnalytics from "./pages/AdminAnalytics";
+import AdminAlerts from "./pages/AdminAlerts";
+import AdminReports from "./pages/AdminReports";
+import AdminTeam from "./pages/AdminTeam";
+import AdminSettings from "./pages/AdminSettings";
 
 const queryClient = new QueryClient();
 
@@ -44,12 +51,19 @@ const App = () => (
             <Route index element={<DashboardHome />} />
             <Route path="journal" element={<Journal />} />
             <Route path="mood" element={<MoodTracking />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
             {/* Add other dashboard routes as needed */}
           </Route>
           
           {/* Admin Routes */}
           <Route path="/admin" element={<Admin />}>
             <Route index element={<AdminHome />} />
+            <Route path="analytics" element={<AdminAnalytics />} />
+            <Route path="alerts" element={<AdminAlerts />} />
+            <Route path="reports" element={<AdminReports />} />
+            <Route path="team" element={<AdminTeam />} />
+            <Route path="settings" element={<AdminSettings />} />
             {/* Add other admin routes as needed */}
           </Route>
           
